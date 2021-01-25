@@ -1,7 +1,7 @@
 class SightingSerializer
   def index
     def initialize(sighting_object)
-    @sighting = sighting_object
+      @sighting = sighting_object
     end
   
     sightings = Sighting.all
