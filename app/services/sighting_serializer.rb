@@ -1,5 +1,9 @@
 class SightingSerializer
   def index
+    def initialize(sighting_object)
+    @sighting = sighting_object
+    end
+  
     sightings = Sighting.all
     render json: sightings.to_json(:include => {
       :bird => {:only => [:name, :species]},
